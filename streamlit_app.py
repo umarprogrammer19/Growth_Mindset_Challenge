@@ -48,7 +48,7 @@ def local_css(mode):
         .stTabs [aria-selected="true"] {
             border-bottom: 3px solid #2c3e50 !important;
         }
-        .stRadio label {
+        .stRadio div {
             color: #2c3e50 !important;
             font-weight: bold;
         }
