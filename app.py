@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# Set page config
 st.set_page_config(
     page_title="Advanced Temperature Converter",
     page_icon="🌡️",
@@ -10,7 +9,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# Custom CSS for light and dark mode
 def local_css(mode):
     if mode == "light":
         return """
@@ -110,7 +108,6 @@ with tab1:
         st.write(f"{kelvin}K = {kelvin_to_celsius(kelvin):.2f}°C")
         st.write(f"{kelvin}K = {kelvin_to_fahrenheit(kelvin):.2f}°F")
     
-    # Visualization
     st.subheader("Temperature Scale Comparison")
     temp_range = range(-50, 101, 10)
     df = pd.DataFrame({
