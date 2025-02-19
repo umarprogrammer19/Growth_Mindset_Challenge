@@ -196,14 +196,16 @@ with tab2:
 
 # Quiz 
 with tab3:
-    st.header("Temperature Conversion Quiz")
+    st.markdown('<div class="custom-quiz">', unsafe_allow_html=True)
     
+    st.header("Temperature Conversion Quiz")
+
     if "quiz_score" not in st.session_state:
         st.session_state.quiz_score = 0
-    
+
     if "current_question" not in st.session_state:
         st.session_state.current_question = 0
-    
+
     questions = [
         {
             "question": "What is 0°C in Fahrenheit?",
@@ -231,28 +233,31 @@ with tab3:
             "correct": 1
         }
     ]
-    
+
     if st.session_state.current_question < len(questions):
         question = questions[st.session_state.current_question]
         st.subheader(f"Question {st.session_state.current_question + 1}")
         st.write(question["question"])
         answer = st.radio("Select your answer:", question["options"], key=f"q{st.session_state.current_question}")
-        
+
         if st.button("Submit Answer"):
             if question["options"].index(answer) == question["correct"]:
-                st.success("Correct!")
+                st.success("✅ Correct!")
                 st.session_state.quiz_score += 1
             else:
-                st.error(f"Incorrect. The correct answer is: {question['options'][question['correct']]}")
+                st.error(f"❌ Incorrect! The correct answer is: {question['options'][question['correct']]}")
             st.session_state.current_question += 1
             st.experimental_rerun()
     else:
-        st.subheader("Quiz Completed!")
-        st.write(f"Your score: {st.session_state.quiz_score}/{len(questions)}")
-        if st.button("Restart Quiz"):
+        st.subheader("🎉 Quiz Completed!")
+        st.write(f"Your Score: **{st.session_state.quiz_score}/{len(questions)}**")
+        
+        if st.button("🔄 Restart Quiz"):
             st.session_state.quiz_score = 0
             st.session_state.current_question = 0
             st.experimental_rerun()
+    
+    st.markdown('</div>', unsafe_allow_html=True)
 
 # Footer
 st.markdown("---")
