@@ -14,12 +14,14 @@ def local_css(mode):
         return """
         <style>
         .stApp {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #e6e6e6 100%);
+            color: #2c3e50;
         }
         .main .block-container {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 2rem;
             border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
         h1, h2, h3 {
             color: #2c3e50;
@@ -28,6 +30,7 @@ def local_css(mode):
             color: #2c3e50;
             background-color: #ecf0f1;
             border: 2px solid #2c3e50;
+            transition: 0.3s;
         }
         .stButton>button:hover {
             background-color: #2c3e50;
@@ -40,19 +43,22 @@ def local_css(mode):
         <style>
         .stApp {
             background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: #ecf0f1;
         }
         .main .block-container {
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.8);
             padding: 2rem;
             border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
         }
-        h1, h2, h3, p {
+        h1, h2, h3 {
             color: #ecf0f1;
         }
         .stButton>button {
             color: #ecf0f1;
             background-color: #34495e;
             border: 2px solid #ecf0f1;
+            transition: 0.3s;
         }
         .stButton>button:hover {
             background-color: #ecf0f1;
