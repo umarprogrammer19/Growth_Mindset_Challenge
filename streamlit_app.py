@@ -223,5 +223,5 @@ with tab3:
 
 # Footer
 st.markdown("---")
-st.markdown("Created with 💕 By Hafiz Muhammaf Umar Farooq using Streamlit")
+st.markdown("Created with 💕 By Hafiz Muhammad Umar Farooq using Streamlit")
 
