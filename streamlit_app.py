@@ -52,6 +52,13 @@ def local_css(mode):
             color: #2c3e50 !important;
             font-weight: bold;
         }
+        .sidebar .sidebar-content {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+        .sidebar .sidebar-content .stRadio div {
+            color: #2c3e50 !important;
+        }
         </style>
         """
     else:
