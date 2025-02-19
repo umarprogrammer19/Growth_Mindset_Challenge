@@ -48,6 +48,10 @@ def local_css(mode):
         .stTabs [aria-selected="true"] {
             border-bottom: 3px solid #2c3e50 !important;
         }
+        .stRadio label {
+            color: #2c3e50 !important;
+            font-weight: bold;
+        }
         </style>
         """
     else:
@@ -88,8 +92,13 @@ def local_css(mode):
         .stTabs [aria-selected="true"] {
             border-bottom: 3px solid #ecf0f1 !important;
         }
+        .stRadio label {
+            color: #ecf0f1 !important;
+            font-weight: bold;
+        }
         </style>
         """
+
 
 # Temperature conversion functions
 def celsius_to_fahrenheit(celsius):
