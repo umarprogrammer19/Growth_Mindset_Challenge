@@ -36,6 +36,18 @@ def local_css(mode):
             background-color: #2c3e50;
             color: #ecf0f1;
         }
+        .stTabs [data-baseweb="tab-list"] {
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            padding: 8px;
+        }
+        .stTabs [data-baseweb="tab"] {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        .stTabs [aria-selected="true"] {
+            border-bottom: 3px solid #2c3e50 !important;
+        }
         </style>
         """
     else:
@@ -63,6 +75,18 @@ def local_css(mode):
         .stButton>button:hover {
             background-color: #ecf0f1;
             color: #34495e;
+        }
+        .stTabs [data-baseweb="tab-list"] {
+            background-color: #2c3e50;
+            border-radius: 10px;
+            padding: 8px;
+        }
+        .stTabs [data-baseweb="tab"] {
+            color: #ecf0f1;
+            font-weight: bold;
+        }
+        .stTabs [aria-selected="true"] {
+            border-bottom: 3px solid #ecf0f1 !important;
         }
         </style>
         """
