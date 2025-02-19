@@ -1,0 +1,15 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+# Ignore virtual environment
+venv/
+pyvenv.cfg
+Lib/
+Include/
+Scripts/
+share/
+
+# Ignore system files
+.DS_Store
+_pycache_/
+*.pyc
+*.pyo
+*.pyd
