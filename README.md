@@ -31,7 +31,7 @@ To run this project locally, follow these steps:
 
 ### 1️⃣ **Clone the Repository**
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/umarprogrammer19/Growth_Mindset_Challenge.git
 cd growth_mindset_challenge
 ```
 
