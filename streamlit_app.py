@@ -259,7 +259,6 @@ with st.expander("Temperature Conversion Quiz"):
             # Move to next question
             st.session_state.current_question += 1
 
-            # Instead of rerun, just clear the cache
             st.rerun()
 
     else:
@@ -269,7 +268,6 @@ with st.expander("Temperature Conversion Quiz"):
         if st.button("🔄 Restart Quiz"):
             st.session_state.quiz_score = 0
             st.session_state.current_question = 0
-            # Reset the app state
             st.rerun()
 
     st.markdown('</div>', unsafe_allow_html=True)
