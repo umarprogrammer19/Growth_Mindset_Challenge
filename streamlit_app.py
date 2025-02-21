@@ -128,7 +128,7 @@ def kelvin_to_fahrenheit(kelvin):
 
 # Sidebar
 st.sidebar.title("Settings")
-mode = st.sidebar.radio("Choose theme:", ("Light", "Dark"))
+mode = st.sidebar.radio("Choose theme:", ("Dark", "Light"))
 st.markdown(local_css(mode.lower()), unsafe_allow_html=True)
 
 # Main content
@@ -201,10 +201,12 @@ with tab2:
     - The Rankine scale is an absolute temperature scale using Fahrenheit degrees
     """)
 
-# Quiz 
-with tab3:
+import streamlit as st
+
+# Quiz
+with st.expander("Temperature Conversion Quiz"):
     st.markdown('<div class="custom-quiz">', unsafe_allow_html=True)
-    
+
     st.header("Temperature Conversion Quiz")
 
     if "quiz_score" not in st.session_state:
@@ -253,17 +255,23 @@ with tab3:
                 st.session_state.quiz_score += 1
             else:
                 st.error(f"❌ Incorrect! The correct answer is: {question['options'][question['correct']]}")
+
+            # Move to next question
             st.session_state.current_question += 1
-            st.experimental_rerun()
+
+            # Instead of rerun, just clear the cache
+            st.rerun()
+
     else:
         st.subheader("🎉 Quiz Completed!")
         st.write(f"Your Score: **{st.session_state.quiz_score}/{len(questions)}**")
-        
+
         if st.button("🔄 Restart Quiz"):
             st.session_state.quiz_score = 0
             st.session_state.current_question = 0
-            st.experimental_rerun()
-    
+            # Reset the app state
+            st.rerun()
+
     st.markdown('</div>', unsafe_allow_html=True)
 
 # Footer
